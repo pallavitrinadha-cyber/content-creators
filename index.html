@@ -1,0 +1,83 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GenAI Sales & Marketing System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>GenAI Sales & Marketing Enablement System</header>
+
+<div class="container">
+  <div class="sidebar">
+    <h3>Modules</h3>
+    <div class="menu">
+      <button onclick="showSection('campaign')">Campaign Generator</button>
+      <button onclick="showSection('sales')">Sales Pitch AI</button>
+      <button onclick="showSection('leads')">Lead Insights</button>
+      <button onclick="showSection('predict')">Predictive Analysis</button>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- Campaign -->
+    <div id="campaign" class="section card">
+      <h2>AI Campaign Generator</h2>
+      <label>Product / Service</label>
+      <input id="campProduct" placeholder="e.g. AI CRM Platform">
+      <label>Target Audience</label>
+      <input id="campAudience" placeholder="e.g. Small Business Owners">
+      <button class="btn" onclick="generateCampaign()">Generate Campaign</button>
+      <div id="campOutput" class="output"></div>
+    </div>
+
+    <!-- Sales -->
+    <div id="sales" class="section card hidden">
+      <h2>AI Sales Pitch Generator</h2>
+      <label>Client Type</label>
+      <input id="salesClient" placeholder="e.g. E-commerce Company">
+      <label>Pain Point</label>
+      <input id="salesPain" placeholder="e.g. Low conversion rates">
+      <button class="btn" onclick="generateSalesPitch()">Generate Sales Pitch</button>
+      <div id="salesOutput" class="output"></div>
+    </div>
+
+    <!-- Leads -->
+    <div id="leads" class="section card hidden">
+      <h2>Lead Intelligence</h2>
+      <label>Industry</label>
+      <input id="leadIndustry" placeholder="e.g. FinTech">
+      <label>Company Size</label>
+      <select id="leadSize">
+        <option>Startup</option>
+        <option>SME</option>
+        <option>Enterprise</option>
+      </select>
+      <button class="btn" onclick="generateLeadInsight()">Generate Lead Insight</button>
+      <div id="leadOutput" class="output"></div>
+    </div>
+
+    <!-- Predict -->
+    <div id="predict" class="section card hidden">
+      <h2>Predictive Analytics</h2>
+      <label>Customer Activity Score (1–100)</label>
+      <input type="number" id="activity" placeholder="e.g. 75">
+      <label>Engagement Level</label>
+      <select id="engagement">
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+      </select>
+      <button class="btn" onclick="predictOutcome()">Predict Outcome</button>
+      <div id="predictOutput" class="output"></div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
